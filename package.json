@@ -1,5 +1,37 @@
 {
+  "name": "PAW-XX",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">\r   Pembukuan Keuangan\r </h1>",
+  "main": "index.js",
+  "engine": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuhamadThoriqAhnaf/PAW-XX.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MuhamadThoriqAhnaf/PAW-XX/issues"
+  },
+  "homepage": "https://github.com/MuhamadThoriqAhnaf/PAW-XX#readme",
   "dependencies": {
-    "react-scroll": "^1.8.8"
+    "bcryptjs": "^2.4.3",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "firebase": "^9.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
   }
 }
