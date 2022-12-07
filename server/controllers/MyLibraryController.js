@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const AsyncHandler = require("express-async-handler");
 
-const Mylibrary = require("../model/Mylibrarymodel");
+const Mylibrary = require("../model/MyLibrarymodel");
 
 exports.createBook = AsyncHandler(async (req, res) => {
   if (
