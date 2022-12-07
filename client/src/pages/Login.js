@@ -11,7 +11,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const { data } = await axios
-        .post("http://localhost:5000/api/auth/signin", {
+        .post("/api/auth/signin", {
           username: e.target[0].value,
           password: e.target[1].value,
         })

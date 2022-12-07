@@ -40,7 +40,7 @@ export default function AdminPage() {
   const [dataFiltered, setDataFiltered] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/book").then((response) => {
+    axios.get("/api/book").then((response) => {
       setData(response.data.data);
       setDataFiltered(response.data.data);
       console.log("data", response.data.data);

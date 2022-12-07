@@ -49,7 +49,7 @@ function AddForm({ refresh }) {
     console.log("data sebelum post", data);
 
     axios
-      .post("http://localhost:5000/api/book", data)
+      .post("/api/book", data)
       .then(function (response) {
         console.log(response);
         console.log("test axios response = " + response);

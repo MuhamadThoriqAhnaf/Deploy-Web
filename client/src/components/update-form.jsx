@@ -48,7 +48,7 @@ export default function UpdateForm({ data: initialData, setRefreshSignal }) {
     data.imageurl = imageurl;
 
     const res = axios.put(
-      `http://localhost:5000/api/book/${initialData._id}`,
+      `/api/book/${initialData._id}`,
       data
     );
 
