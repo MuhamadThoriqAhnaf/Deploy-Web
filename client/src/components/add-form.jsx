@@ -46,7 +46,7 @@ export default function AddForm({setRefreshSignal}) {
     console.log("data sebelum post", data);
 
     await axios
-      .post("http://localhost:5000/api/book", data)
+      .post("/api/book", data)
       .catch(function (error) {
         console.log(error);
       });
