@@ -24,7 +24,7 @@ export default function DeleteForm({ data: initialData, setRefreshSignal, }) {
   async function Delete(e) {
     e.preventDefault();
     const res = await axios.delete(
-      `http://localhost:5000/api/book/${initialData._id}`
+      `/api/book/${initialData._id}`
     );
     setRefreshSignal((s) => !s);
     console.log(res);

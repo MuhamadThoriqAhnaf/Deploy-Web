@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 const signout = async (id) => {
-  await axios.post(`http://localhost:5000/api/auth/signout`);
+  await axios.post(`/api/auth/signout`);
   {
     localStorage.removeItem("accessToken");
     toast.success("Selamat Tinggal Admin");

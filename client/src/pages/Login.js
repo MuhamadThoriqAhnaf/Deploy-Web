@@ -1,16 +1,15 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 export default function Login() {
+
   const test = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(
-        "http://localhost:5000/api/auth/signin",
-        {
+      const { data } = await axios
+        .post("/api/auth/signin", {
           username: e.target[0].value,
           password: e.target[1].value,
         }
