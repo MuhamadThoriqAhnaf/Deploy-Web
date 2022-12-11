@@ -10,7 +10,7 @@ import axios from "axios";
 export default function UpdateForm({
   setRefreshSignal,
   showUpdate: initialData,
-  setShowUpdate,
+
 }) {
   useEffect(() => {
     setJudul(initialData?.judul);
@@ -29,11 +29,23 @@ export default function UpdateForm({
   const [pinjam, setPinjam] = useState(initialData?.pinjam);
   const [pengembalian, setPengembalian] = useState(initialData?.pengembalian);
   const [imageurl, setImageurl] = useState(initialData?.imageurl);
+  const [imageUpload, setImageUpload] = useState(null);
+  const [imageList, setImageList] = useState([]);
+  const [showUpdate, setShowUpdate] = React.useState(false);
+
+  const data = {
+    judul: judul,
+    penulis: penulis,
+    terbit: terbit,
+    sinopsis: sinopsis,
+    pinjam: pinjam,
+    pengembalian: pengembalian,
+  };
 
   const uploadImage = (e) => {
     return new Promise((resolve, reject) => {
       if (e == null) return;
-      const imageRef = ref(storage, `covers/${e.name}`);
+      const imageRef = ref(storage, `covers/${imageUpload.name}`);
       uploadBytes(imageRef, e).then((snapshot) => {
         getDownloadURL(snapshot.ref).then((url) => {
           setImageurl(url);
