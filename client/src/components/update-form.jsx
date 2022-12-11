@@ -10,6 +10,7 @@ import axios from "axios";
 export default function UpdateForm({
   setRefreshSignal,
   showUpdate: initialData,
+  setShowUpdate,
 
 }) {
   useEffect(() => {
@@ -31,16 +32,7 @@ export default function UpdateForm({
   const [imageurl, setImageurl] = useState(initialData?.imageurl);
   const [imageUpload, setImageUpload] = useState(null);
   const [imageList, setImageList] = useState([]);
-  const [showUpdate, setShowUpdate] = React.useState(false);
 
-  const data = {
-    judul: judul,
-    penulis: penulis,
-    terbit: terbit,
-    sinopsis: sinopsis,
-    pinjam: pinjam,
-    pengembalian: pengembalian,
-  };
 
   const uploadImage = (e) => {
     return new Promise((resolve, reject) => {
@@ -100,7 +92,7 @@ export default function UpdateForm({
                     class="font-thin text-sm sm:text-md px-2 border border-black rounded"
                     onClick={() => setShowUpdate(false)}
                   >
-                    x
+                    X
                   </button>
                 </div>
               </div>
