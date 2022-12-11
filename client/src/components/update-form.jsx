@@ -58,6 +58,7 @@ export default function UpdateForm({
   async function Update(e) {
     e.preventDefault();
 
+
     const data = {
       judul: judul,
       penulis: penulis,
@@ -68,8 +69,8 @@ export default function UpdateForm({
       imageurl: imageurl,
     };
 
-    const res = await axios.put(
-      `http://localhost:5000/api/book/${initialData._id}`,
+    const res = axios.put(
+      `/api/book/${initialData._id}`,
       data
     );
 
