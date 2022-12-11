@@ -33,7 +33,7 @@ export default function AdminPage() {
   });
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/book").then((response) => {
+    axios.get("/api/book").then((response) => {
       setData(response.data.data);
       console.log("data", response.data.data);
     });
