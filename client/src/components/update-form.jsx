@@ -113,7 +113,7 @@ export default function UpdateForm({
                       accept="image/png, image/jpg, image/jpeg"
                       class="flex rounded-md pr-2 border border-black bg-tosca text-xs mt-4 w-[241px]"
                       onChange={(e) => {
-                        uploadImage(e.target.files[0]);
+                        setImageUpload(e.target.files[0]);
                       }}
                       onClick={(e) => {
                         e.target.value = "";
